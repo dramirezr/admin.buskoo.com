@@ -1,0 +1,141 @@
+.centered-text{
+	text-align: center;
+}
+
+.black-bg{
+	background: none repeat scroll 0 0 #111111;
+}
+
+#bz_types {
+    background: none repeat scroll 0 0 #3F3F3F;
+    color: #FFFFFF;
+    margin-top: 30px;
+    padding: 11px 0;
+}
+
+.row.full-width {
+    max-width: 100%;
+}
+#copyright p, #copyright ul {
+    margin-bottom: 0;
+}
+
+.float-right{
+	float: right;
+}
+
+.float-left{
+	float: left;
+}
+
+.flexigrid div.form-div input[type="text"], .flexigrid div.form-div input[type="password"] {
+	padding: 0 !important;
+}
+
+#map_canvas{
+	position: absolute;
+	max-height: inherit;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+}
+
+.top-bar {
+	margin-bottom: 0 !important;
+}
+
+.opacity07{
+	filter:alpha(opacity=70); /* IE */
+    -moz-opacity:0.7; /* Mozilla */
+    opacity: 0.7; /* CSS3 */
+}
+
+.text-bold{
+	font-weight: bold;
+}
+
+.text-color-white{
+	color: #FFFFFF;
+}
+
+.text-color-blue{
+	color: #08088A;
+}
+
+.padding-10px{
+	padding: 10px !important;
+}
+
+.clear-margin{
+	margin: 0 !important;
+}
+
+#adv-search, #view-all-types, #chlocation {
+	color: RED;
+}
+
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+
+.with100{
+	 width: 100% !important;
+}
+
+#extra-types{
+	max-height: 9em;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#main-content-wrapper{
+	max-height: inherit; 
+	height: 84%;
+}
+
+.search-results-panel{
+	padding: 5px 10px 5px;
+	border-bottom: 1px solid #D9D9D9;
+	margin-bottom: 3px;
+}
+.search-results-panel:hover{
+	background: none repeat scroll 0 0 #F2F2F2 !important;
+	cursor: pointer;
+}
+
+.clean-padding{
+	padding: 0 !important;
+}
+
+#results-wrapper{
+	margin-top: 10px; 
+	max-height: inherit; 
+	height: 90%; 
+	overflow-y: auto; 
+	overflow-x: hidden; 
+}
+
+.white-bg{
+	background: none repeat scroll 0 0 #FFFFFF !important;
+}
+
+#adv-search-block{
+	padding: 10px 0 10px !important;
+}
+
+.margin-top-10px{
+	margin: 10px auto !important;
+}
+
+.font-weight-normal{
+	font-weight: normal !important;
+}
+.line-height-08{
+	line-height: 0.8 !important;
+}
+.margin-bottom-5px{
+	margin-bottom: 5px !important;
+}
