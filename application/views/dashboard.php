@@ -67,6 +67,12 @@ $user = $this->session->userdata('user');
 	          <li class="divider"></li>
 	          <li><?=anchor('posts',lang('dashboard.posts'))?></li>
 	          <? endif; ?>
+
+	          <? if(check_feature('biz_type')): ?>
+	          <li class="divider"></li>
+	          <li><?=anchor('biz_type',lang('dashboard.biz_type'))?></li>
+	          <? endif; ?>
+	          
 	          
 	          <li class="divider"></li>
 	          <li class="has-form">

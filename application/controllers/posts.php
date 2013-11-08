@@ -28,7 +28,8 @@ class Posts extends CI_Controller {
 		$this->grocery_crud->set_relation('user_id','user','name');
 		
 		/* Campos para editar */
-		$this->grocery_crud->fields('user_id', 'state', 'name', 'tags');
+		$this->grocery_crud->fields('user_id', 'state', 'name', 'tags','icon');
+		$this->grocery_crud->set_field_upload('icon','assets/images/icon');
 		
 		$this->grocery_crud->callback_after_update(array($this, 'after_update'));
 			

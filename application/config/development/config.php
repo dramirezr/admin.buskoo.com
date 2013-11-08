@@ -376,5 +376,8 @@ $config['ytvideo_product_id'] = array(9, 10);
 $config['tags_product_id'] = array(11, 12);
 $config['promo_product_id'] = array(13, 14);
 
+
+$config['server_path_icon'] = 'buskoo.dev';
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
