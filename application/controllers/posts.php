@@ -12,7 +12,7 @@ class Posts extends CI_Controller {
 	}
 	
 	function index(){	
-		//$this->grocery_crud->set_theme('datatables');
+		$this->grocery_crud->set_theme('datatables');
 		
 		$this->grocery_crud->set_table('post');
 		

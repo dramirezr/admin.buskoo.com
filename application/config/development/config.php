@@ -379,5 +379,10 @@ $config['promo_product_id'] = array(13, 14);
 
 $config['server_path_icon'] = 'buskoo.dev';
 
+//Media server
+$config['media_server_show_url'] = 'http://buskko.net/main/show';
+$config['path_global_filesystem'] = 'C:/xampp/htdocs/buskoo.com';
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

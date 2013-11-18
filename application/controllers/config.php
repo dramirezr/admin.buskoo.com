@@ -30,6 +30,7 @@ class Config extends CI_Controller {
 		
 		$this->setup_params['output'] = $this->grocery_crud->render();
   		$this->setup_params['title'] = lang('setup.rooms.title');
+  		$this->setup_params['tools'] = 'OK';
   		
 		$this->render();
 	}

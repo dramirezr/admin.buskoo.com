@@ -73,7 +73,17 @@ $user = $this->session->userdata('user');
 	          <li><?=anchor('biz_type',lang('dashboard.biz_type'))?></li>
 	          <? endif; ?>
 	          
+	          <? if(check_feature('banner')): ?>
+	          <li class="divider"></li>
+	          <li><?=anchor('banner',lang('dashboard.banner'))?></li>
+	          <? endif; ?>
 	          
+	          <? if(check_feature('tools')): ?>
+	          <li class="divider"></li>
+	          <li><?=anchor('tools',lang('dashboard.tools'))?></li>
+	          <? endif; ?>
+	          
+
 	          <li class="divider"></li>
 	          <li class="has-form">
 	            <a href="<?=site_url('logout')?>" class="button"><?=lang('dashboard.logout')?></a>
@@ -92,7 +102,7 @@ $user = $this->session->userdata('user');
 			<h7 id="date" class="docs float-left"></h7>
 		</div>
 	</div>
-	
+
 	<!-- Content -->
 	<?=$content?>
 	<!-- End Content -->

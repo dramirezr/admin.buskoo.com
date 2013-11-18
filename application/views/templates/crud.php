@@ -7,6 +7,9 @@
 <?php endforeach; ?>
 
 <div class="large-12 columns">
+	<?php if(isset($tools)) 
+		echo anchor('tools/save_html_client',lang('dashboard.save_html_client'));
+	?>
 	<h3><?=$title?></h3>
 	<div><?= $output->output; ?></div>
 </div>

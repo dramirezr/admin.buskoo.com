@@ -213,4 +213,35 @@ class Business extends CI_Model {
 	function inactivate_product($id){
 		return $this->db->update('bz_products', array("active" => '0'), array('id' => $id));
 	}
+
+	function billing_client(){
+
+		$sql  = " SELECT a.post_id, b.name, b.user_id, b.icon FROM  invoice a,post b ";
+		$sql .= " WHERE a.post_id = b.id and activate_biz=1 and b.state='A' ";
+		$sql .= " GROUP By a.post_id, b.name ";
+		
+		$result = $this->db->query($sql)->result();
+		if(count($result))
+			return $result;
+		return false; 
+
+	}
+
+
+	function getPostmeta($post_id){
+		//Get the metas
+		$metas_obj = $this->db->get_where('postmeta', array('post_id' => $post_id))->result();
+		if(!count($metas_obj))
+			return false;
+		
+		return $metas_obj;
+	}
+
+	function getMedia($data){
+		$media = $this->db->get_where('media', $data)->result();
+		if(!count($media))
+			return null;
+		return $media;
+	}
+
 }

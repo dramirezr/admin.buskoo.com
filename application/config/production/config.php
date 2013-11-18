@@ -384,5 +384,8 @@ $config['tags_product_id'] = array(11, 12);
 $config['promo_product_id'] = array(13, 14);
 		
 $config['server_path_icon'] = 'buskoo.com';
+
+$config['media_server_show_url'] = 'http://buskko.net/main/show';
+$config['path_global_filesystem'] = '/var/www/buskoo.com';
 /* End of file config.php */
 /* Location: ./application/config/config.php */
