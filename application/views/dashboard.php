@@ -78,12 +78,6 @@ $user = $this->session->userdata('user');
 	          <li><?=anchor('banner',lang('dashboard.banner'))?></li>
 	          <? endif; ?>
 	          
-	          <? if(check_feature('tools')): ?>
-	          <li class="divider"></li>
-	          <li><?=anchor('tools',lang('dashboard.tools'))?></li>
-	          <? endif; ?>
-	          
-
 	          <li class="divider"></li>
 	          <li class="has-form">
 	            <a href="<?=site_url('logout')?>" class="button"><?=lang('dashboard.logout')?></a>
