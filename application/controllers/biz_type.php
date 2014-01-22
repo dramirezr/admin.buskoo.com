@@ -8,6 +8,11 @@ class Biz_type extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		
+		if(!$user = $this->session->userdata('user')){
+			$this->lang->switch_uri($user->lang);		
+			redirect($user->lang.'/login'); 
+		}
+
 		$this->load->library('grocery_CRUD');
 	}
 	
@@ -21,7 +26,7 @@ class Biz_type extends CI_Controller {
 		//$this->grocery_crud->unset_texteditor('notes');
 		
 		/* Campos de la lista */
-		$this->grocery_crud->set_theme('datatables');
+		//$this->grocery_crud->set_theme('datatables');
 		$this->grocery_crud->columns('id','name','hits');
 		$this->grocery_crud->add_fields('id_parent', 'name', 'tag','icon');
     	$this->grocery_crud->edit_fields('id_parent', 'name', 'tag','icon');

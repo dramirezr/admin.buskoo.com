@@ -25,8 +25,8 @@ class Banner extends CI_Controller {
 
 		$this->grocery_crud->set_theme('datatables');
 		$this->grocery_crud->columns('id','description','state');
-		$this->grocery_crud->add_fields('description', 'content', 'image','state');
-    	$this->grocery_crud->edit_fields('description', 'content', 'image','state');
+		$this->grocery_crud->add_fields('description', 'url','content', 'image','state');
+    	$this->grocery_crud->edit_fields('description', 'url', 'content', 'image','state');
     	$this->grocery_crud->required_fields('description', 'content', 'image','state');
 		$this->grocery_crud->set_field_upload('image','assets/images/banner');
 					

@@ -8,6 +8,11 @@ class Config extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		
+		if(!$user = $this->session->userdata('user')){
+			$this->lang->switch_uri($user->lang);		
+			redirect($user->lang.'/login'); 
+		}
+
 		$this->load->library('grocery_CRUD');
 	}
 	

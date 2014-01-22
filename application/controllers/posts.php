@@ -7,12 +7,16 @@ class Posts extends CI_Controller {
 		
 	function __construct(){
 		parent::__construct();
-		
+		if(!$user = $this->session->userdata('user')){
+			$this->lang->switch_uri($user->lang);		
+			redirect($user->lang.'/login'); 
+		}
+
 		$this->load->library('grocery_CRUD');
 	}
 	
 	function index(){	
-		$this->grocery_crud->set_theme('datatables');
+		//$this->grocery_crud->set_theme('datatables');
 		
 		$this->grocery_crud->set_table('post');
 		
