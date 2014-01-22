@@ -250,8 +250,13 @@ class Tools extends CI_Controller {
 		
 		}
 
+		$archivoindex = ci_config('path_global_filesystem')."/client/tpl/indice.tpl";
+		$abririndex = fopen($archivoindex,'r+');
+		$indexarchivo = fread($abririndex,filesize($archivoindex));
+		$indexarchivo = str_replace("[CLIENT]",$html_index,$indexarchivo);	
+
 		$fd = fopen(ci_config('path_global_filesystem').'/client/index.html', 'w');
-		fwrite($fd, $html_index);
+		fwrite($fd, $indexarchivo);
 		fclose($fd);
 		echo "Generando www.buskoo.com/client/index.html <br>";
 
