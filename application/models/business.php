@@ -215,10 +215,9 @@ class Business extends CI_Model {
 	}
 
 	function billing_client(){
-
-		$sql  = " SELECT a.post_id, b.name, b.user_id, b.icon FROM  invoice a,post b ";
-		$sql .= " WHERE a.post_id = b.id and activate_biz=1 and b.state='A' ";
-		$sql .= " GROUP By a.post_id, b.name ";
+		$sql  = " SELECT a.post_id, b.visits, b.name, b.user_id, b.icon FROM invoice a,post b  ";
+		$sql .= " WHERE a.post_id = b.id and a.state='paid' and b.state='A'  ";
+		$sql .= " GROUP BY a.post_id, b.visits, b.name, b.user_id, b.icon ORDER BY b.visits DESC ";
 		
 		$result = $this->db->query($sql)->result();
 		if(count($result))

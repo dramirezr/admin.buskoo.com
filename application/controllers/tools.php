@@ -163,6 +163,8 @@ class Tools extends CI_Controller {
 		$archivoxml = ci_config('path_global_filesystem')."/client/tpl/site_map.tpl";
 		$abrirxml = fopen($archivoxml,'r+');
 		$xml = fread($abrirxml,filesize($archivoxml));
+
+		array_map( "unlink", glob(ci_config('path_global_filesystem').'/client/*.html') );
 		
 		$urlsitemap = 	' 	<url>' .
   					  	'		<loc>[URL]</loc>' .
@@ -222,7 +224,7 @@ class Tools extends CI_Controller {
 			$name = strtolower($this->sanear_string($p->name));
 			$name = str_replace(" ","_",$name);
 			$name = $name.'.html';
-			$fd = fopen(ci_config('path_global_filesystem').'/client/'.$name, 'w');
+			$fd = fopen(ci_config('path_global_filesystem').'/client/'.$name, 'w+');
 			fwrite($fd, $html_post);
 			fclose($fd);
 			echo "Generando "."www.buskoo.com/client/".$name." <br>";
@@ -255,13 +257,13 @@ class Tools extends CI_Controller {
 		$indexarchivo = fread($abririndex,filesize($archivoindex));
 		$indexarchivo = str_replace("[CLIENT]",$html_index,$indexarchivo);	
 
-		$fd = fopen(ci_config('path_global_filesystem').'/client/index.html', 'w');
+		$fd = fopen(ci_config('path_global_filesystem').'/client/index.html', 'w+');
 		fwrite($fd, $indexarchivo);
 		fclose($fd);
 		echo "Generando www.buskoo.com/client/index.html <br>";
 
 		$xml = str_replace("[SITEMAP]",$html_urlsite,$xml); 
-		$fd = fopen(ci_config('path_global_filesystem').'/sitemap.xml', 'w');
+		$fd = fopen(ci_config('path_global_filesystem').'/sitemap.xml', 'w+');
 		fwrite($fd, $xml);
 		fclose($fd);
 		echo "Generando www.buskoo.com/sitemap.xml <br>";
